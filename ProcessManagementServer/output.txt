@@ -1,0 +1,47 @@
+// Sample Output for Process Management Server
+// Michael Hartung
+// 02/12/2015
+
+Michaels-MacBook-Pro:ProcessManagementServer Michael$ ./mainServer
+Server 2371 created with name FileServer...
+Server 2372 created with name WebServer...
+Process 2373 started!
+Process 2374 started!
+Process 2375 started!
+Process 2376 started!
+Process 2377 started!
+
+Enter a command: createServer 2 4 newServer
+Server 2378 created with name newServer...
+Process 2379 started!
+Process 2380 started!
+
+Enter a command: displayStatus
+--+= MainServer
+  |
+  |----FileServer
+  |
+  |----WebServer
+  |
+  |----newServer
+
+Enter a command: createProcess newServer
+Process 2381 started!
+
+Enter a command: deleteProcess newServer
+Not a valid command!
+
+Enter a command: abortProcess newServer
+Process 2381 terminating...
+
+Enter a command: abortServer newServer
+Process 2380 terminating...
+newServer exiting...
+
+Enter a command: exit
+Process 2374 terminating...
+Process 2377 terminating...
+WebServer exiting...
+Process 2375 terminating...
+FileServer exiting...
+Michaels-MacBook-Pro:ProcessManagementServer Michael$
